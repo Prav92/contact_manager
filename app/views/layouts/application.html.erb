@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+}
+
+th {
+  background-color:grey;
+}
+</style>
   <title>ContactManager</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div style = background-color:skyblue>
+<p align='right'><%= link_to 'All contacts', users_path %>  <%= link_to 'New Contact', new_user_path %></p>
+<p></p>
+<p></p>
+</div>
 <%= yield %>
 
 </body>
